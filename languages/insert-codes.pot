@@ -1,0 +1,283 @@
+# Copyright (C) 2024 WpFreshers
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Insert Codes 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wpfreshers.com/plugins/insert-codes/\n"
+"POT-Creation-Date: 2024-06-01 11:49:53+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: includes/Admin/Admin.php:33 includes/Admin/Admin.php:34
+#: includes/Plugin.php:261 includes/Plugin.php:262
+msgid "WP Placeholder"
+msgstr ""
+
+#: includes/Admin/Admin.php:44 includes/Admin/Admin.php:45
+#: includes/Plugin.php:272 includes/Plugin.php:273
+msgid "Things"
+msgstr ""
+
+#: includes/Admin/Admin.php:62 includes/Admin/Admin.php:63
+#: includes/Admin/views/settings.php:13
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/Admin.php:89
+msgid "Things per page"
+msgstr ""
+
+#: includes/Admin/ListTables/ThingsListTable.php:82
+msgid "No items found."
+msgstr ""
+
+#: includes/Admin/ListTables/ThingsListTable.php:94
+msgid "Title"
+msgstr ""
+
+#: includes/Admin/ListTables/ThingsListTable.php:95
+msgid "Description"
+msgstr ""
+
+#: includes/Admin/ListTables/ThingsListTable.php:96
+msgid "Date"
+msgstr ""
+
+#: includes/Admin/ListTables/ThingsListTable.php:165
+#. translators: %d: key id.
+msgid "ID: %d"
+msgstr ""
+
+#: includes/Admin/ListTables/ThingsListTable.php:166
+msgid "Edit"
+msgstr ""
+
+#: includes/Admin/ListTables/ThingsListTable.php:167
+#: includes/Admin/ListTables/ThingsListTable.php:181
+#: includes/Admin/views/edit-thing.php:44
+msgid "Delete"
+msgstr ""
+
+#: includes/Admin/ListTables/ThingsListTable.php:220
+#. translators: %d: number of master keys deleted.
+msgid "%d thing deleted."
+msgid_plural "%d things deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Admin/views/add-thing.php:13
+msgid "Add Thing"
+msgstr ""
+
+#: includes/Admin/views/add-thing.php:15 includes/Admin/views/edit-thing.php:19
+msgid "Go Back"
+msgstr ""
+
+#: includes/Admin/views/add-thing.php:18
+msgid "Bellow are the example fields to add a thing"
+msgstr ""
+
+#: includes/Admin/views/add-thing.php:25 includes/Admin/views/edit-thing.php:29
+msgid "Thing name:"
+msgstr ""
+
+#: includes/Admin/views/add-thing.php:27
+msgid "Enter the thing name"
+msgstr ""
+
+#: includes/Admin/views/add-thing.php:32 includes/Admin/views/edit-thing.php:36
+msgid "Thing content:"
+msgstr ""
+
+#: includes/Admin/views/add-thing.php:34
+msgid "Enter the thing content"
+msgstr ""
+
+#: includes/Admin/views/add-thing.php:40
+msgid "Add thing"
+msgstr ""
+
+#: includes/Admin/views/edit-thing.php:13 includes/PostTypes.php:39
+msgid "Edit Thing"
+msgstr ""
+
+#: includes/Admin/views/edit-thing.php:16
+msgid "Add Another"
+msgstr ""
+
+#: includes/Admin/views/edit-thing.php:22
+msgid "Here is the example list table updated at March 26, 2024"
+msgstr ""
+
+#: includes/Admin/views/edit-thing.php:48
+msgid "Save thing"
+msgstr ""
+
+#: includes/Admin/views/settings.php:15
+msgid "Bellow are the example fields to add settings"
+msgstr ""
+
+#: includes/Admin/views/settings.php:22
+msgid "Option name:"
+msgstr ""
+
+#: includes/Admin/views/settings.php:24
+msgid "Enter the option name"
+msgstr ""
+
+#: includes/Admin/views/settings.php:29
+msgid "Option content:"
+msgstr ""
+
+#: includes/Admin/views/settings.php:31
+msgid "Enter the option content"
+msgstr ""
+
+#: includes/Admin/views/settings.php:37
+msgid "Update Settings"
+msgstr ""
+
+#: includes/Admin/views/things.php:15
+msgid "Things List Table"
+msgstr ""
+
+#: includes/Admin/views/things.php:18
+msgid "Add new thing"
+msgstr ""
+
+#: includes/Admin/views/things.php:28
+msgid "Search"
+msgstr ""
+
+#: includes/Controllers/Actions.php:40
+msgid "Thing added successfully."
+msgstr ""
+
+#: includes/Controllers/Actions.php:44
+msgid "There has been an issue while creating a thing."
+msgstr ""
+
+#: includes/Controllers/Actions.php:76
+msgid "Thing updated successfully."
+msgstr ""
+
+#: includes/Controllers/Actions.php:78
+msgid "There has been an issue while updating the thing."
+msgstr ""
+
+#: includes/Controllers/Actions.php:94
+msgid "Settings saved successfully."
+msgstr ""
+
+#: includes/Plugin.php:167
+#. translators: 1: plugin name 2: WooCommerce
+msgid "%1$s requires %2$s to be activated. %3$s"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Insert Codes"
+msgstr ""
+
+#: includes/Plugin.php:169 includes/Plugin.php:181
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/Plugin.php:173
+msgid "Activate WooCommerce"
+msgstr ""
+
+#: includes/Plugin.php:179
+#. translators: 1: plugin name 2: WooCommerce
+msgid "%1$s requires %2$s to be installed and activated. %3$s"
+msgstr ""
+
+#: includes/Plugin.php:185
+msgid "Install WooCommerce"
+msgstr ""
+
+#: includes/PostTypes.php:37
+msgid "Add New Thing"
+msgstr ""
+
+#: includes/PostTypes.php:38
+msgid "New Thing"
+msgstr ""
+
+#: includes/PostTypes.php:40
+msgid "View Thing"
+msgstr ""
+
+#: includes/PostTypes.php:41
+msgid "All Things"
+msgstr ""
+
+#: includes/PostTypes.php:42
+msgid "Search Things"
+msgstr ""
+
+#: includes/PostTypes.php:43
+msgid "Parent Things:"
+msgstr ""
+
+#: includes/PostTypes.php:44
+msgid "No master keys found."
+msgstr ""
+
+#: includes/PostTypes.php:45
+msgid "No master keys found in Trash."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://wpfreshers.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"An example of how to create a placeholder plugin for wordpress.org "
+"organization."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WpFreshers"
+msgstr ""
+
+#: includes/PostTypes.php:32
+msgctxt "post type general name"
+msgid "Things"
+msgstr ""
+
+#: includes/PostTypes.php:33
+msgctxt "post type singular name"
+msgid "Thing"
+msgstr ""
+
+#: includes/PostTypes.php:34
+msgctxt "admin menu"
+msgid "Things"
+msgstr ""
+
+#: includes/PostTypes.php:35
+msgctxt "add new on admin bar"
+msgid "Thing"
+msgstr ""
+
+#: includes/PostTypes.php:36
+msgctxt "ticket"
+msgid "Add New"
+msgstr ""
