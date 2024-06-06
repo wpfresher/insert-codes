@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Insert Codes 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wpfreshers.com/plugins/insert-codes/\n"
-"POT-Creation-Date: 2024-06-06 09:43:56+00:00\n"
+"POT-Creation-Date: 2024-06-06 10:02:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -77,12 +77,16 @@ msgstr ""
 msgid "PHP Code:"
 msgstr ""
 
-#: includes/Admin/views/codes.php:45 includes/Admin/views/codes.php:50
+#: includes/Admin/views/codes.php:45
 msgid "Enter the PHP code..."
 msgstr ""
 
 #: includes/Admin/views/codes.php:49
 msgid "JS Code:"
+msgstr ""
+
+#: includes/Admin/views/codes.php:50
+msgid "Enter the JS code..."
 msgstr ""
 
 #: includes/Admin/views/codes.php:57 includes/Admin/views/settings.php:37

@@ -103,16 +103,18 @@ class Admin {
 		wp_register_script( 'insert-codes-admin', INSERT_CODES_URL . 'assets/dist/js/insertcodes-admin.js', array( 'jquery' ), '1.0.0', true );
 
 		if ( 'toplevel_page_insert-codes' === $hook ) {
-//			$settings = wp_enqueue_code_editor( array( 'type' => 'text/html' ) );
+			$settings = wp_enqueue_code_editor( array( 'type' => 'text/html' ) );
 
 			// Return if the editor was not enqueued.
-//			if ( false === $settings ) {
-//				return;
-//			}
+			if ( false === $settings ) {
+				return;
+			}
 
-			wp_enqueue_code_editor(array('type' => 'text/html'));
-			wp_enqueue_script('wp-theme-plugin-editor');
-			wp_enqueue_style('wp-codemirror');
+			wp_enqueue_script( 'insert-codes-admin' );
+
+//			wp_enqueue_code_editor(array('type' => 'text/html'));
+//			wp_enqueue_script('wp-theme-plugin-editor');
+//			wp_enqueue_style('wp-codemirror');
 
 //			wp_add_inline_script(
 //				'code-editor',
@@ -125,7 +127,7 @@ class Admin {
 
 		if ( in_array( $hook, $screens, true ) ) {
 			wp_enqueue_style( 'insert-codes-admin' );
-			wp_enqueue_script( 'insert-codes-admin' );
+//			wp_enqueue_script( 'insert-codes-admin' );
 		}
 	}
 }
