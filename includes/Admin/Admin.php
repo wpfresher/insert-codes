@@ -6,6 +6,9 @@ defined( 'ABSPATH' ) || exit;
 
 /**
  * Class Admin.
+ *
+ * @since 1.0.0
+ * @package WpFreshers\InsertCodes\Admin
  */
 class Admin {
 
@@ -15,46 +18,42 @@ class Admin {
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'add_menu' ) );
 		add_action( 'admin_menu', array( $this, 'settings_menu' ), 100 );
-		add_filter( 'set-screen-option', array( __CLASS__, 'set_screen' ), 10, 3 );
-		// Example hook format 'manage_' . screen -> base . '_columns'.
-		add_filter(
-			'manage_toplevel_page_insert-codes_columns',
-			array( 'WpFreshers\InsertCodes\Admin\ListTables\ThingsListTable', 'define_columns' ),
-			10,
-			0
-		);
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 
 	/**
 	 * Add menu page.
+	 *
+	 * @since 1.0.0
+	 * @return void
 	 */
 	public function add_menu() {
 		add_menu_page(
-			__( 'WP Placeholder', 'insert-codes' ),
-			__( 'WP Placeholder', 'insert-codes' ),
+			__( 'Insert Codes', 'insert-codes' ),
+			__( 'Insert Codes', 'insert-codes' ),
 			'manage_options',
 			'insert-codes',
 			null,
 			'dashicons-plugins-checked',
-			'55.9',
+			'80',
 		);
 
-		$load = add_submenu_page(
+		add_submenu_page(
 			'insert-codes',
-			__( 'Things', 'insert-codes' ),
-			__( 'Things', 'insert-codes' ),
+			__( 'Codes', 'insert-codes' ),
+			__( 'Codes', 'insert-codes' ),
 			'manage_options',
 			'insert-codes',
 			array( $this, 'render_page' ),
 			1
 		);
-
-		// Load screen options.
-		add_action( 'load-' . $load, array( __CLASS__, 'load_things_page' ) );
 	}
 
 	/**
 	 * Add settings submenu.
+	 *
+	 * @since 1.0.0
+	 * @return void
 	 */
 	public function settings_menu() {
 		add_submenu_page(
@@ -62,75 +61,71 @@ class Admin {
 			__( 'Settings', 'insert-codes' ),
 			__( 'Settings', 'insert-codes' ),
 			'manage_options',
-			'insertcodes-settings',
+			'insert-codes-settings',
 			array( $this, 'settings_page' ),
 		);
 	}
 
 	/**
 	 * Render settings page.
+	 *
+	 * @since 1.0.0
+	 * @return void
 	 */
 	public function settings_page() {
 		include __DIR__ . '/views/settings.php';
 	}
 
 	/**
-	 * Load master keys page & set screen options.
+	 * Render menu page content.
 	 *
 	 * @since 1.0.0
 	 * @return void
 	 */
-	public static function load_things_page() {
-		$screen = get_current_screen();
-		if ( 'toplevel_page_insert-codes' === $screen->id ) {
-			add_screen_option(
-				'per_page',
-				array(
-					'label'   => __( 'Things per page', 'insert-codes' ),
-					'default' => 20,
-					'option'  => 'insertcodes_things_per_page',
-				)
-			);
-		}
+	public function render_page() {
+		include __DIR__ . '/views/codes.php';
 	}
 
 	/**
-	 * Set screen options.
+	 * Enqueue admin scripts.
 	 *
-	 * @param bool       $screen_option Whether it is true or false.
-	 * @param string     $option Option id.
-	 * @param string|int $value The option value.
+	 * @param string $hook Hook name.
 	 *
 	 * @since 1.0.0
-	 * @return mixed|int
 	 */
-	public static function set_screen( $screen_option, $option, $value ) {
-		return $value;
-	}
+	public function enqueue_scripts( $hook ) {
+		$screens = array(
+			'toplevel_page_insert-codes',
+			'insert-codes_page_insert-codes-settings',
+		);
 
-	/**
-	 * Render menu page content.
-	 */
-	public function render_page() {
-		wp_verify_nonce( '_nonce' );
-		$add  = isset( $_GET['add'] ) ? true : false;
-		$edit = isset( $_GET['edit'] ) ? absint( $_GET['edit'] ) : 0;
+		wp_register_style( 'insert-codes-admin', INSERT_CODES_URL . 'assets/dist/css/insertcodes-admin.css', array(), '1.0.0' );
+		wp_register_script( 'insert-codes-admin', INSERT_CODES_URL . 'assets/dist/js/insertcodes-admin.js', array( 'jquery' ), '1.0.0', true );
 
-		if ( $edit ) {
-			$thing = insertcodes_get_thing( $edit );
+		if ( 'toplevel_page_insert-codes' === $hook ) {
+//			$settings = wp_enqueue_code_editor( array( 'type' => 'text/html' ) );
 
-			if ( ! $thing instanceof \WP_Post ) {
-				wp_safe_redirect( remove_query_arg( 'edit' ) );
-				exit();
-			}
+			// Return if the editor was not enqueued.
+//			if ( false === $settings ) {
+//				return;
+//			}
+
+			wp_enqueue_code_editor(array('type' => 'text/html'));
+			wp_enqueue_script('wp-theme-plugin-editor');
+			wp_enqueue_style('wp-codemirror');
+
+//			wp_add_inline_script(
+//				'code-editor',
+//				sprintf(
+//					'jQuery( function() { wp.codeEditor.initialize( "insert_codes_headers", %s ); } );',
+//					wp_json_encode( $settings )
+//				)
+//			);
 		}
 
-		if ( $add ) {
-			include __DIR__ . '/views/add-thing.php';
-		} elseif ( $edit ) {
-			include __DIR__ . '/views/edit-thing.php';
-		} else {
-			include __DIR__ . '/views/things.php';
+		if ( in_array( $hook, $screens, true ) ) {
+			wp_enqueue_style( 'insert-codes-admin' );
+			wp_enqueue_script( 'insert-codes-admin' );
 		}
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Insert Codes - Insert Headers And Footers Code Snippet
+ * Plugin Name: Insert Codes - Headers And Footers Code Snippet
  * Description: Insert headers, body and footers code snippet.
  * Plugin URI:  http://wpfreshers.com
  * Author:      WpFreshers
