@@ -6,40 +6,100 @@
  * @package InsertCodess
  */
 
+defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
+
 ?>
-<div class="wrap insertcodes-wrap">
-	<div id="icon-users" class="icon32"></div>
-	<h1 class="wp-heading-inline">
-		<?php esc_html_e( 'Settings', 'insert-codes' ); ?>
-	</h1>
-	<p><?php esc_html_e( 'Bellow are the example fields to add settings', 'insert-codes' ); ?></p>
-
-	<hr class="wp-header-end">
-
-	<form id="insertcodes-form" method="post" action="<?php echo esc_html( admin_url( 'admin-post.php' ) ); ?>">
-		<div class="field-group">
-			<div class="field-label">
-				<label for="option_name"><?php esc_html_e( 'Option name:', 'insert-codes' ); ?></label>
-			</div>
-			<input type="text" name="option_name" id="option_name" placeholder="<?php esc_html_e( 'Enter the option name', 'insert-codes' ); ?>">
+<div class="insert-codes-container">
+	<div class="wrap insert-codes-wrap">
+		<div class="insert-codes__header">
+			<h1 class="wp-heading-inline">
+				<?php esc_html_e( 'Settings', 'insert-codes' ); ?>
+			</h1>
+			<p><?php esc_html_e( 'Bellow are the settings fields of the plugin.', 'insert-codes' ); ?></p>
 		</div>
+		<hr class="wp-header-end">
+		<div class="insert-codes__body">
+			<div class="insert-codes__content">
+				<form id="insert-codes-form" method="post" action="<?php echo esc_html( admin_url( 'admin-post.php' ) ); ?>">
+					<div class="field-group filed-section">
+						<h3><?php esc_html_e( 'General Settings', 'insert-codes' ); ?></h3>
+						<p><?php esc_html_e( 'The following options are the general settings of the plugin. These will determine how the plugin will work.', 'insert-codes' ); ?></p>
+					</div>
 
-		<div class="field-group">
-			<div class="field-label">
-				<label for="option_content"><?php esc_html_e( 'Option content:', 'insert-codes' ); ?></label>
+					<div class="field-group">
+						<div class="field-label">
+							<label for="insert_codes_headers_priority"><strong><?php esc_html_e( 'Insert Header\'s Priority:', 'insert-codes' ); ?></strong></label>
+						</div>
+						<div class="field">
+							<input type="number" name="insert_codes_headers_priority" id="insert_codes_headers_priority" placeholder="<?php esc_html_e( '10', 'insert-codes' ); ?>" value="<?php echo esc_html( get_option( 'insert_codes_headers_priority', 10 ) ); ?>">
+							<p class="description"><?php printf( /* translators: HTML head tag as string. */ esc_html__( 'Enter the scripts execution priority for %s sections. Default action priority is 10', 'insert-codes' ), esc_html( htmlspecialchars( '<head>' ) ) ); ?></p>
+						</div>
+					</div>
+
+					<div class="field-group">
+						<div class="field-label">
+							<label for="insert_codes_body_priority"><strong><?php esc_html_e( 'Insert Body\'s Priority:', 'insert-codes' ); ?></strong></label>
+						</div>
+						<div class="field">
+							<input type="number" name="insert_codes_body_priority" id="insert_codes_body_priority" placeholder="<?php esc_html_e( '10', 'insert-codes' ); ?>" value="<?php echo esc_html( get_option( 'insert_codes_body_priority', 10 ) ); ?>">
+							<p class="description"><?php printf( /* translators: HTML head tag as string. */ esc_html__( 'Enter the scripts execution priority for %s sections. Default action priority is 10', 'insert-codes' ), esc_html( htmlspecialchars( '<body>' ) ) ); ?></p>
+						</div>
+					</div>
+
+					<div class="field-group">
+						<div class="field-label">
+							<label for="insert_codes_footer_priority"><strong><?php esc_html_e( 'Insert Footer\'s Priority:', 'insert-codes' ); ?></strong></label>
+						</div>
+						<div class="field">
+							<input type="number" name="insert_codes_footer_priority" id="insert_codes_footer_priority" placeholder="<?php esc_html_e( '10', 'insert-codes' ); ?>" value="<?php echo esc_html( get_option( 'insert_codes_footer_priority', 10 ) ); ?>">
+							<p class="description"><?php printf( /* translators: HTML footer tag as string. */ esc_html__( 'Enter the scripts execution priority for %s sections. Default action priority is 10', 'insert-codes' ), esc_html( htmlspecialchars( '<footer>' ) ) ); ?></p>
+						</div>
+					</div>
+
+					<div class="field-group filed-section">
+						<h3><?php esc_html_e( 'Advanced Settings', 'insert-codes' ); ?></h3>
+						<p><?php esc_html_e( 'The following options are the advanced settings of the plugin.', 'insert-codes' ); ?></p>
+					</div>
+
+					<div class="field-group">
+						<div class="field-label">
+							<strong><?php esc_html_e( 'Delete Data:', 'insert-codes' ); ?></strong>
+						</div>
+						<div class="field">
+							<label for="insert_codes_delete_data">
+								<input name="insert_codes_delete_data" id="insert_codes_delete_data" type="checkbox" value="yes" <?php checked( get_option( 'insert_codes_delete_data' ), 'yes' ); ?>>
+								<?php esc_html_e( 'Delete plugin data', 'insert-codes' ); ?>
+							</label>
+							<p class="description"><?php esc_html_e( 'Enabling this will delete all the data while uninstalling the plugin.', 'insert-codes' ); ?></p>
+						</div>
+					</div>
+
+					<div class="field-group is-last-item">
+						<input type="hidden" name="action" value="insert_codes_settings">
+						<?php wp_nonce_field( 'insert_codes_settings' ); ?>
+
+						<div class="field-submit-btn">
+							<?php submit_button(); ?>
+						</div>
+					</div>
+				</form>
 			</div>
-			<textarea type="text" name="option_content" id="option_content" placeholder="<?php esc_html_e( 'Enter the option content', 'insert-codes' ); ?>"></textarea>
-		</div>
-
-		<div class="field-group is-last-item">
-			<div class="field-label"></div>
-			<div class="field-submit-btn">
-				<button class="button button-primary"><?php esc_html_e( 'Update Settings', 'insert-codes' ); ?></button>
+			<div class="insert-codes__aside aside__items">
+				<div class="aside__item">
+					<div class="aside__item__header">
+						<h4>This is aside header.</h4>
+					</div>
+					<div class="aside__item__body">
+						<ul>
+							<li>Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+							<li>Item 4</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
-
-		<input type="hidden" name="action" value="insertcodes_update_settings">
-		<?php wp_nonce_field( 'insertcodes_update_settings' ); ?>
-	</form>
+	</div>
 </div>
 <?php

@@ -207,8 +207,6 @@ class Plugin {
 	 */
 	public function init() {
 		new Admin\Admin();
-
-//		new PostTypes();
-//		new Controllers\Actions();
+		new Controllers\Actions();
 	}
 }

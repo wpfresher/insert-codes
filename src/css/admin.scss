@@ -1,1 +1,33 @@
 @import "form";
+
+// Page Layouts.
+.insert-codes-container{
+	.insert-codes__header{
+
+	}
+	.insert-codes__body{
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 1.25rem;
+		.insert-codes__content{
+			width: 70%;
+			border: 1px solid #ddd;
+			background: #fff;
+		}
+		.insert-codes__aside{
+			width: 30%;
+			.aside__item{
+				border: 1px solid #ddd;
+				background: #fff;
+				margin-bottom: 1rem;
+			}
+			.aside__item__header{
+				border-bottom: 1px solid #ddd;
+				padding: 0 1rem;
+			}
+			.aside__item__body{
+				padding: 0 1rem;
+			}
+		}
+	}
+}

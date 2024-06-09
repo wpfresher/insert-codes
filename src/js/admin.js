@@ -16,15 +16,9 @@
 					mode: 'htmlmixed'
 				})
 			});
-			 wp.codeEditor.initialize($('#ic_html_editor'), htmlSettings);
-
-			// CSS Editor
-			var cssSettings = _.extend({}, defaultSettings, {
-				codemirror: _.extend({}, defaultSettings.codemirror, {
-					mode: 'css'
-				})
-			});
-			wp.codeEditor.initialize($('#ic_css_editor'), cssSettings);
+			 wp.codeEditor.initialize($('#insert_codes_header'), htmlSettings);
+			 wp.codeEditor.initialize($('#insert_codes_body'), htmlSettings);
+			 wp.codeEditor.initialize($('#insert_codes_footer'), htmlSettings);
 
 			// PHP Editor
 			var phpSettings = _.extend({}, defaultSettings, {
@@ -32,7 +26,7 @@
 					mode: 'application/x-httpd-php' // Or use "php" instead.
 				})
 			});
-			wp.codeEditor.initialize($('#ic_php_editor'), phpSettings);
+			// wp.codeEditor.initialize($('#ic_php_editor'), phpSettings);
 
 			// JS Editor
 			var jsSettings = _.extend({}, defaultSettings, {
@@ -40,7 +34,7 @@
 					mode: 'javascript'
 				})
 			});
-			wp.codeEditor.initialize($('#ic_js_editor'), jsSettings);
+			// wp.codeEditor.initialize($('#ic_js_editor'), jsSettings);
 		});
 	});
 
