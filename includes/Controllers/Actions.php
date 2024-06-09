@@ -29,9 +29,9 @@ class Actions {
 	public static function handle_hbf_scripts() {
 		wp_verify_nonce( '_nonce' );
 
-		$header_scripts = isset( $_POST['insert_codes_header'] ) ? wp_kses_post( wp_unslash( $_POST['insert_codes_header'] ) ) : '';
-		$body_scripts   = isset( $_POST['insert_codes_body'] ) ? wp_kses_post( wp_unslash( $_POST['insert_codes_body'] ) ) : '';
-		$footer_scripts = isset( $_POST['insert_codes_footer'] ) ? wp_kses_post( wp_unslash( $_POST['insert_codes_footer'] ) ) : '';
+		$header_scripts = isset( $_POST['insert_codes_header'] ) ? wp_kses( wp_unslash( $_POST['insert_codes_header'] ), insert_codes_get_allowed_html() ) : '';
+		$body_scripts   = isset( $_POST['insert_codes_body'] ) ? wp_kses( wp_unslash( $_POST['insert_codes_body'] ), insert_codes_get_allowed_html() ) : '';
+		$footer_scripts = isset( $_POST['insert_codes_footer'] ) ? wp_kses( wp_unslash( $_POST['insert_codes_footer'] ), insert_codes_get_allowed_html() ) : '';
 
 		// Updating options.
 		update_option( 'insert_codes_header', $header_scripts );

@@ -30,7 +30,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 							<label for="insert_codes_header"><strong><?php esc_html_e( 'Insert Scripts in Header:', 'insert-codes' ); ?></strong></label>
 						</div>
 						<div class="field">
-							<textarea type="text" name="insert_codes_header" id="insert_codes_header"><?php wp_kses_post( get_option( 'insert_codes_header' ) ); ?></textarea>
+							<textarea type="text" name="insert_codes_header" id="insert_codes_header"><?php echo wp_kses( get_option( 'insert_codes_header' ), insert_codes_get_allowed_html() ); ?></textarea>
 							<p class="description"><?php printf( /* translators: HTML head tag as string. */ esc_html__( 'These scripts will be printed in the %s section.', 'insert-codes' ), esc_html( htmlspecialchars( '<head>' ) ) ); ?></p>
 						</div>
 					</div>
@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 							<label for="insert_codes_body"><strong><?php esc_html_e( 'Insert Scripts in Body:', 'insert-codes' ); ?></strong></label>
 						</div>
 						<div class="field">
-							<textarea type="text" name="insert_codes_body" id="insert_codes_body"><?php wp_kses_post( get_option( 'insert_codes_body' ) ); ?></textarea>
+							<textarea type="text" name="insert_codes_body" id="insert_codes_body"><?php echo wp_kses( get_option( 'insert_codes_body' ), insert_codes_get_allowed_html() ); ?></textarea>
 							<p class="description"><?php printf( /* translators: HTML head tag as string. */ esc_html__( 'These scripts will be printed bellow the %s section.', 'insert-codes' ), esc_html( htmlspecialchars( '<body>' ) ) ); ?></p>
 						</div>
 					</div>
@@ -50,7 +50,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 							<label for="insert_codes_footer"><strong><?php esc_html_e( 'Insert Scripts in Footer:', 'insert-codes' ); ?></strong></label>
 						</div>
 						<div class="field">
-							<textarea type="text" name="insert_codes_footer" id="insert_codes_footer"><?php wp_kses_post( get_option( 'insert_codes_footer' ) ); ?></textarea>
+							<textarea type="text" name="insert_codes_footer" id="insert_codes_footer"><?php echo wp_kses( get_option( 'insert_codes_footer' ), insert_codes_get_allowed_html() ); ?></textarea>
 							<p class="description"><?php printf( /* translators: HTML head tag as string. */ esc_html__( 'These scripts will be printed bellow the %s section.', 'insert-codes' ), esc_html( htmlspecialchars( '<footer>' ) ) ); ?></p>
 						</div>
 					</div>

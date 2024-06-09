@@ -89,7 +89,7 @@ class Plugin {
 	 * @return void
 	 */
 	public function includes() {
-		// require_once __DIR__ . '/Functions.php';
+		require_once __DIR__ . '/Functions.php';
 	}
 
 	/**
