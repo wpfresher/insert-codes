@@ -11,6 +11,8 @@ defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 /**
  * Delete options by prefix.
  *
+ * @param string $prefix Prefix of the option name.
+ *
  * @since 1.0.0
  * @return void
  */
