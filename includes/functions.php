@@ -36,6 +36,7 @@ function insert_codes_get_allowed_html() {
 			'content'    => array(),
 			'charset'    => array(),
 			'http-equiv' => array(),
+			'property'   => array(),
 		),
 		'a'        => array(
 			'href'   => array(),

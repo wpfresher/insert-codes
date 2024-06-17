@@ -5,7 +5,7 @@ namespace WpFreshers\InsertCodes\Controllers;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Actions Class.
+ * Actions class.
  *
  * @since 1.0.0
  * @package WpFreshers\InsertCodes\Controllers
@@ -51,13 +51,13 @@ class Actions {
 	 */
 	public static function handle_settings() {
 		wp_verify_nonce( '_nonce' );
-		$headers_priority = isset( $_POST['insert_codes_headers_priority'] ) ? intval( wp_unslash( $_POST['insert_codes_headers_priority'] ) ) : intval( '10' );
+		$headers_priority = isset( $_POST['insert_codes_header_priority'] ) ? intval( wp_unslash( $_POST['insert_codes_header_priority'] ) ) : intval( '10' );
 		$body_priority    = isset( $_POST['insert_codes_body_priority'] ) ? intval( wp_unslash( $_POST['insert_codes_body_priority'] ) ) : intval( '10' );
 		$footers_priority = isset( $_POST['insert_codes_footer_priority'] ) ? intval( wp_unslash( $_POST['insert_codes_footer_priority'] ) ) : intval( '10' );
 		$is_delete_data   = isset( $_POST['insert_codes_delete_data'] ) ? sanitize_key( wp_unslash( $_POST['insert_codes_delete_data'] ) ) : '';
 
 		// Updating options.
-		update_option( 'insert_codes_headers_priority', $headers_priority );
+		update_option( 'insert_codes_header_priority', $headers_priority );
 		update_option( 'insert_codes_body_priority', $body_priority );
 		update_option( 'insert_codes_footer_priority', $footers_priority );
 		update_option( 'insert_codes_delete_data', $is_delete_data );

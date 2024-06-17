@@ -28,10 +28,10 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
 					<div class="field-group">
 						<div class="field-label">
-							<label for="insert_codes_headers_priority"><strong><?php esc_html_e( 'Insert Header\'s Priority:', 'insert-codes' ); ?></strong></label>
+							<label for="insert_codes_header_priority"><strong><?php esc_html_e( 'Insert Header\'s Priority:', 'insert-codes' ); ?></strong></label>
 						</div>
 						<div class="field">
-							<input type="number" name="insert_codes_headers_priority" id="insert_codes_headers_priority" placeholder="<?php esc_html_e( '10', 'insert-codes' ); ?>" value="<?php echo esc_html( get_option( 'insert_codes_headers_priority', 10 ) ); ?>">
+							<input type="number" name="insert_codes_header_priority" id="insert_codes_header_priority" placeholder="<?php esc_attr_e( '10', 'insert-codes' ); ?>" value="<?php echo esc_attr( get_option( 'insert_codes_header_priority', 10 ) ); ?>">
 							<p class="description"><?php printf( /* translators: HTML head tag as string. */ esc_html__( 'Enter the scripts execution priority for %s sections. Default action priority is 10', 'insert-codes' ), esc_html( htmlspecialchars( '<head>' ) ) ); ?></p>
 						</div>
 					</div>
@@ -41,7 +41,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 							<label for="insert_codes_body_priority"><strong><?php esc_html_e( 'Insert Body\'s Priority:', 'insert-codes' ); ?></strong></label>
 						</div>
 						<div class="field">
-							<input type="number" name="insert_codes_body_priority" id="insert_codes_body_priority" placeholder="<?php esc_html_e( '10', 'insert-codes' ); ?>" value="<?php echo esc_html( get_option( 'insert_codes_body_priority', 10 ) ); ?>">
+							<input type="number" name="insert_codes_body_priority" id="insert_codes_body_priority" placeholder="<?php esc_attr_e( '10', 'insert-codes' ); ?>" value="<?php echo esc_attr( get_option( 'insert_codes_body_priority', 10 ) ); ?>">
 							<p class="description"><?php printf( /* translators: HTML head tag as string. */ esc_html__( 'Enter the scripts execution priority for %s sections. Default action priority is 10', 'insert-codes' ), esc_html( htmlspecialchars( '<body>' ) ) ); ?></p>
 						</div>
 					</div>
@@ -51,7 +51,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 							<label for="insert_codes_footer_priority"><strong><?php esc_html_e( 'Insert Footer\'s Priority:', 'insert-codes' ); ?></strong></label>
 						</div>
 						<div class="field">
-							<input type="number" name="insert_codes_footer_priority" id="insert_codes_footer_priority" placeholder="<?php esc_html_e( '10', 'insert-codes' ); ?>" value="<?php echo esc_html( get_option( 'insert_codes_footer_priority', 10 ) ); ?>">
+							<input type="number" name="insert_codes_footer_priority" id="insert_codes_footer_priority" placeholder="<?php esc_attr_e( '10', 'insert-codes' ); ?>" value="<?php echo esc_attr( get_option( 'insert_codes_footer_priority', 10 ) ); ?>">
 							<p class="description"><?php printf( /* translators: HTML footer tag as string. */ esc_html__( 'Enter the scripts execution priority for %s sections. Default action priority is 10', 'insert-codes' ), esc_html( htmlspecialchars( '<footer>' ) ) ); ?></p>
 						</div>
 					</div>
@@ -87,14 +87,11 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 			<div class="insert-codes__aside aside__items">
 				<div class="aside__item">
 					<div class="aside__item__header">
-						<h4>This is aside header.</h4>
+						<h4><?php esc_html_e( 'Recommended Plugins', 'insert-codes' ); ?></h4>
 					</div>
 					<div class="aside__item__body">
 						<ul>
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-							<li>Item 4</li>
+							<li><a href="https://wordpress.org/plugins/autocomplete-orders-for-woocommerce/" target="_blank"><?php esc_html_e( 'Autocomplete Orders for WooCommerce', 'insert-codes' ); ?></a></li>
 						</ul>
 					</div>
 				</div>

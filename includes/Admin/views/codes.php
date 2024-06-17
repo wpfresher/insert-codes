@@ -67,27 +67,11 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 			<div class="insert-codes__aside aside__items">
 				<div class="aside__item">
 					<div class="aside__item__header">
-						<h4>This is aside header.</h4>
+						<h4><?php esc_html_e( 'Recommended Plugins', 'insert-codes' ); ?></h4>
 					</div>
 					<div class="aside__item__body">
 						<ul>
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-							<li>Item 4</li>
-						</ul>
-					</div>
-				</div>
-				<div class="aside__item">
-					<div class="aside__item__header">
-						<h4>This is aside header.</h4>
-					</div>
-					<div class="aside__item__body">
-						<ul>
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-							<li>Item 4</li>
+							<li><a href="https://wordpress.org/plugins/autocomplete-orders-for-woocommerce/" target="_blank"><?php esc_html_e( 'Autocomplete Orders for WooCommerce', 'insert-codes' ); ?></a></li>
 						</ul>
 					</div>
 				</div>

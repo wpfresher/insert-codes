@@ -26,9 +26,13 @@ class Frontend {
 	 * @return void
 	 */
 	public function init() {
-		add_action( 'wp_head', array( $this, 'insert_codes_into_head' ) );
-		add_action( 'wp_body_open', array( $this, 'insert_codes_into_body' ) );
-		add_action( 'wp_footer', array( $this, 'insert_codes_into_footer' ) );
+		$header_priority = intval( get_option( 'insert_codes_header_priority' ) );
+		$body_priority   = intval( get_option( 'insert_codes_body_priority' ) );
+		$footer_priority = intval( get_option( 'insert_codes_footer_priority' ) );
+
+		add_action( 'wp_head', array( $this, 'insert_codes_into_head' ), $header_priority );
+		add_action( 'wp_body_open', array( $this, 'insert_codes_into_body' ), $body_priority );
+		add_action( 'wp_footer', array( $this, 'insert_codes_into_footer' ), $footer_priority );
 	}
 
 	/**

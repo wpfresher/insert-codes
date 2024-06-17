@@ -2,7 +2,44 @@
 /**
  * Insert Codes Uninstall.
  *
+ * @since 1.0.0
  * @package WpFreshers\InsertCodes
  */
 
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
+
+/**
+ * Delete options by prefix.
+ *
+ * @since 1.0.0
+ * @return void
+ */
+function insert_codes_delete_options( $prefix ) {
+	// Retrieve all options.
+	$all_options = wp_load_alloptions();
+
+	// Loop through options and delete those with the specified prefix.
+	foreach ( $all_options as $option_name => $option_value ) {
+		if ( strpos( $option_name, $prefix ) === 0 ) {
+			delete_option( $option_name );
+		}
+	}
+}
+
+if ( 'yes' === get_option( 'insert_codes_delete_data' ) ) {
+	$option_prefix = 'insert_codes_';
+
+	// Delete options for the main site.
+	insert_codes_delete_options( $option_prefix );
+
+	// Delete options in a multisite network.
+	if ( is_multisite() ) {
+		$sites = get_sites();
+
+		foreach ( $sites as $site ) {
+			switch_to_blog( $site->blog_id );
+			insert_codes_delete_options( $option_prefix );
+			restore_current_blog();
+		}
+	}
+}

@@ -2,13 +2,14 @@
 
 // Page Layouts.
 .insert-codes-container{
-	.insert-codes__header{
-
-	}
+	.insert-codes__header{}
 	.insert-codes__body{
 		display: flex;
 		flex-wrap: nowrap;
 		gap: 1.25rem;
+		h3, h4, p{
+			margin: 0;
+		}
 		.insert-codes__content{
 			width: 70%;
 			border: 1px solid #ddd;
@@ -23,7 +24,8 @@
 			}
 			.aside__item__header{
 				border-bottom: 1px solid #ddd;
-				padding: 0 1rem;
+				padding: 1rem;
+				background: #dddddd;
 			}
 			.aside__item__body{
 				padding: 0 1rem;

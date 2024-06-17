@@ -113,6 +113,9 @@ class Plugin {
 	 */
 	public function activate() {
 		update_option( 'insert_codes_version', INSERT_CODES_VERSION );
+		update_option( 'insert_codes_header_priority', 10 );
+		update_option( 'insert_codes_body_priority', 10 );
+		update_option( 'insert_codes_footer_priority', 10 );
 	}
 
 	/**
@@ -158,7 +161,7 @@ class Plugin {
 	 * @return void
 	 */
 	public function add_flash_notice( $notice = '', $type = 'success', $dismissible = true ) {
-		$notices          = get_option( 'insertcodes_flash_notices', array() );
+		$notices          = get_option( 'insert_codes_flash_notices', array() );
 		$dismissible_text = ( $dismissible ) ? 'is-dismissible' : '';
 
 		// Add new notice.
@@ -172,7 +175,7 @@ class Plugin {
 		);
 
 		// Update the notices array.
-		update_option( 'insertcodes_flash_notices', $notices );
+		update_option( 'insert_codes_flash_notices', $notices );
 	}
 
 	/**
@@ -182,7 +185,7 @@ class Plugin {
 	 * @return void
 	 */
 	public function display_flash_notices() {
-		$notices = get_option( 'insertcodes_flash_notices', array() );
+		$notices = get_option( 'insert_codes_flash_notices', array() );
 
 		foreach ( $notices as $notice ) {
 			printf(
@@ -195,7 +198,7 @@ class Plugin {
 
 		// Reset options to prevent notices being displayed forever.
 		if ( ! empty( $notices ) ) {
-			delete_option( 'insertcodes_flash_notices', array() );
+			delete_option( 'insert_codes_flash_notices', array() );
 		}
 	}
 
