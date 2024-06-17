@@ -1,6 +1,6 @@
 <?php
 
-namespace WpFreshers\InsertCodes\Frontend;
+namespace InsertCodes\Frontend;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  * Class Frontend.
  *
  * @since 1.0.0
- * @package WpFreshers\InsertCodes\Frontend
+ * @package InsertCodes\Frontend
  */
 class Frontend {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace WpFreshers\InsertCodes;
+namespace InsertCodes;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  * The main plugin class.
  *
  * @since 1.0.0
- * @package WpFreshers\InsertCodes
+ * @package InsertCodes
  */
 class Plugin {
 

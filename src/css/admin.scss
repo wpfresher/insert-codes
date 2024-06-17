@@ -31,5 +31,12 @@
 				padding: 0 1rem;
 			}
 		}
+		@media (max-width: 782px) {
+			flex-direction: column;
+			.insert-codes__content,
+			.insert-codes__aside{
+				width: 100%;
+			}
+		}
 	}
 }

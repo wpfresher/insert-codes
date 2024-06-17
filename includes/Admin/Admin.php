@@ -1,6 +1,6 @@
 <?php
 
-namespace WpFreshers\InsertCodes\Admin;
+namespace InsertCodes\Admin;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit;
  * Class Admin.
  *
  * @since 1.0.0
- * @package WpFreshers\InsertCodes\Admin
+ * @package InsertCodes\Admin
  */
 class Admin {
 

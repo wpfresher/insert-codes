@@ -12,14 +12,14 @@
  * @package InsertCodes
  */
 
-use WpFreshers\InsertCodes\Plugin;
+use InsertCodes\Plugin;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
 // Autoload function.
 spl_autoload_register(
 	function ( $class_name ) {
-		$prefix = 'WpFreshers\\InsertCodes\\';
+		$prefix = 'InsertCodes\\';
 		$len    = strlen( $prefix );
 
 		// Bail out if the class name doesn't start with our prefix.

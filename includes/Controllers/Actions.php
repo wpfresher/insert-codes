@@ -1,6 +1,6 @@
 <?php
 
-namespace WpFreshers\InsertCodes\Controllers;
+namespace InsertCodes\Controllers;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit;
  * Actions class.
  *
  * @since 1.0.0
- * @package WpFreshers\InsertCodes\Controllers
+ * @package InsertCodes\Controllers
  */
 class Actions {
 

@@ -3,7 +3,7 @@
  * Insert Codes Uninstall.
  *
  * @since 1.0.0
- * @package WpFreshers\InsertCodes
+ * @package InsertCodes
  */
 
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
