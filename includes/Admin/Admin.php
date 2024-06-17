@@ -99,8 +99,8 @@ class Admin {
 			'insert-codes_page_insert-codes-settings',
 		);
 
-		wp_register_style( 'insert-codes-admin', INSERT_CODES_URL . 'assets/dist/css/insertcodes-admin.css', array(), '1.0.0' );
-		wp_register_script( 'insert-codes-admin', INSERT_CODES_URL . 'assets/dist/js/insertcodes-admin.js', array( 'jquery' ), '1.0.0', true );
+		wp_register_style( 'insert-codes-admin', INSERT_CODES_URL . 'assets/dist/css/insert-codes-admin.css', array(), '1.0.0' );
+		wp_register_script( 'insert-codes-admin', INSERT_CODES_URL . 'assets/dist/js/insert-codes-admin.js', array( 'jquery' ), '1.0.0', true );
 
 		if ( 'toplevel_page_insert-codes' === $hook ) {
 			$settings = wp_enqueue_code_editor( array( 'type' => 'text/html' ) );

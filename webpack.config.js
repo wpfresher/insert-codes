@@ -6,8 +6,8 @@ module.exports = [
         ...defaultConfig,
         entry: {
             ...defaultConfig.entry(),
-            'css/insertcodes-admin': './src/css/admin.scss',
-            'js/insertcodes-admin': './src/js/admin.js',
+            'css/insert-codes-admin': './src/css/admin.scss',
+            'js/insert-codes-admin': './src/js/admin.js',
         },
         output: {
             ...defaultConfig.output,
