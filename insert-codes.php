@@ -2,14 +2,27 @@
 /**
  * Plugin Name: Insert Codes - Headers And Footers Code Snippet
  * Description: Insert headers, body and footers code snippet.
- * Plugin URI:  http://wpfreshers.com
+ * Version:     1.0.0
+ * Plugin URI:  http://wpfreshers.com/plugins/insert-codes/
  * Author:      WpFreshers
  * Author URI:  http://wpfreshers.com
- * Version:     1.0.0
  * Textdomain:  insert-codes
- * License:     GPL2
+ * Domain Path: /languages/
+ * License:     GPL-2.0-or-later
+ * Requires PHP: 5.6
+ * Tested up to: 6.5
  *
  * @package InsertCodes
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  */
 
 use InsertCodes\Plugin;
