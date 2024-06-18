@@ -34,7 +34,7 @@ class Admin {
 			'manage_options',
 			'insert-codes',
 			null,
-			'dashicons-plugins-checked',
+			'dashicons-editor-code',
 			'80',
 		);
 
