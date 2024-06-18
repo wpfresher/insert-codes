@@ -27,7 +27,7 @@ class Actions {
 	 * @return void
 	 */
 	public static function handle_hbf_scripts() {
-		wp_verify_nonce( '_nonce' );
+		check_admin_referer( 'insert_codes_hbf_scripts' );
 
 		$header_scripts = isset( $_POST['insert_codes_header'] ) ? wp_kses( wp_unslash( $_POST['insert_codes_header'] ), insert_codes_get_allowed_html() ) : '';
 		$body_scripts   = isset( $_POST['insert_codes_body'] ) ? wp_kses( wp_unslash( $_POST['insert_codes_body'] ), insert_codes_get_allowed_html() ) : '';
@@ -50,7 +50,8 @@ class Actions {
 	 * @return void
 	 */
 	public static function handle_settings() {
-		wp_verify_nonce( '_nonce' );
+		check_admin_referer( 'insert_codes_settings' );
+
 		$headers_priority = isset( $_POST['insert_codes_header_priority'] ) ? intval( wp_unslash( $_POST['insert_codes_header_priority'] ) ) : intval( '10' );
 		$body_priority    = isset( $_POST['insert_codes_body_priority'] ) ? intval( wp_unslash( $_POST['insert_codes_body_priority'] ) ) : intval( '10' );
 		$footers_priority = isset( $_POST['insert_codes_footer_priority'] ) ? intval( wp_unslash( $_POST['insert_codes_footer_priority'] ) ) : intval( '10' );
