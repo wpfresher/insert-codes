@@ -68,7 +68,7 @@ A: The impact on performance is minimal as the plugin inserts the scripts direct
 
 == Changelog ==
 
-= 1.0.0 (18 June 2024) =
+= 1.0.0 (19 June 2024) =
 * Initial release with support for adding header, body, and footer scripts.
 
 == Upgrade Notice ==

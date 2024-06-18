@@ -82,6 +82,8 @@ Thumbs.db
 # Build related files
 /assets/js
 /assets/css
+/src/js
+/src/css
 vendor
 lib
 development.md
