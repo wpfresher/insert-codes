@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-The "Insert Codes - Headers And Footers Code Snippet" plugin allows you to easily add custom code to the header, body, and footer sections of your WordPress website.
+Easily insert codes to the header, body, and footer sections of your WordPress website.
 
 == Description ==
 The "Insert Codes - Headers And Footers Code Snippet" plugin allows you to easily add custom code to the header, body, and footer sections of your WordPress website. Whether you need to add tracking scripts, custom CSS, or other code snippets, this plugin provides a simple and user-friendly interface to manage your scripts without editing your theme files.
