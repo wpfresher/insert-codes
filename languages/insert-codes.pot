@@ -404,7 +404,7 @@ msgid "Insert Codes - Headers And Footers Code Snippet"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://wpfreshers.com"
+msgid "http://urldev.com"
 msgstr ""
 
 #. Description of the plugin/theme

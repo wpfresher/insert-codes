@@ -3,9 +3,9 @@
  * Plugin Name: Insert Codes - Headers And Footers Code Snippet
  * Description: The "Insert Codes - Headers And Footers Code Snippet" plugin allows you to easily add custom code to the header, body, and footer sections of your WordPress website.
  * Version:     1.0.0
- * Plugin URI:  http://wpfreshers.com/plugins/insert-codes/
- * Author:      WpFreshers
- * Author URI:  http://wpfreshers.com
+ * Plugin URI:  https://urldev.com/plugins/insert-codes/
+ * Author:      UrlDev
+ * Author URI:  https://urldev.com
  * Textdomain:  insert-codes
  * Domain Path: /languages/
  * License:     GPL-2.0-or-later

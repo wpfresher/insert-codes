@@ -1,6 +1,6 @@
 {
   "name": "wpfresher/insert-codes",
-  "description": "Insert Codes.",
+  "description": "The \"Insert Codes - Headers And Footers Code Snippet\" plugin allows you to easily add custom code to the header, body, and footer sections of your WordPress website.",
   "homepage": "https://wpfresher.com/plugins/insert-codes/",
   "type": "wordpress-plugin",
   "license": "GPL-3.0-or-later",
