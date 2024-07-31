@@ -2,10 +2,10 @@
 Contributors: urldev
 Tags: insert codes, insert headers and footers, insert header, insert footer, code snippet
 Requires at least: 5.0
-Tested up to: 6.5
-Requires PHP: 5.6
+Tested up to: 6.6
 Stable tag: 1.0.0
-License: GPL-2.0-or-later
+Requires PHP: 7.4
+License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Easily insert codes to the header, body, and footer sections of your WordPress website.
@@ -80,9 +80,9 @@ A: The impact on performance is minimal as the plugin inserts the scripts direct
 For developers, this plugin provides hooks and filters to extend its functionality. Refer to the plugin documentation for more details.
 
 = Hooks & Filters =
-* insert_codes_header_scripts: Filter the header scripts before they are output.
-* insert_codes_body_scripts: Filter the body scripts before they are output.
-* insert_codes_footer_scripts: Filter the footer scripts before they are output.
+* insertcodes_header_scripts: Filter the header scripts before they are output.
+* insertcodes_body_scripts: Filter the body scripts before they are output.
+* insertcodes_footer_scripts: Filter the footer scripts before they are output.
 
 = License =
 This plugin is licensed under the GPLv2 or later. You are free to modify and distribute it under the terms of the license.

@@ -1,16 +1,18 @@
 <?php
 /**
- * Plugin Name: Insert Codes - Headers And Footers Code Snippet
- * Description: The "Insert Codes - Headers And Footers Code Snippet" plugin allows you to easily add custom code to the header, body, and footer sections of your WordPress website.
- * Version:     1.0.0
- * Plugin URI:  https://urldev.com/plugins/insert-codes/
- * Author:      UrlDev
- * Author URI:  https://urldev.com
- * Textdomain:  insert-codes
- * Domain Path: /languages/
- * License:     GPL-2.0-or-later
- * Requires PHP: 5.6
- * Tested up to: 6.5
+ * Plugin Name:       Insert Codes - Headers And Footers Code Snippet
+ * Plugin URI:        https://urldev.com/plugins/insert-codes/
+ * Description:       The "Insert Codes - Headers And Footers Code Snippet" plugin allows you to easily add custom code to the header, body, and footer sections of your WordPress website.
+ * Version:           1.0.0
+ * Requires at least: 5.0
+ * Requires PHP:      7.4
+ * Author:            UrlDev
+ * Author URI:        https://urldev.com
+ * License:           GPL v2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       insert-codes
+ * Domain Path:       /languages
+ * Tested up to:      6.6
  *
  * @package InsertCodes
  *
@@ -65,9 +67,9 @@ spl_autoload_register(
  * @since 1.0.0
  * @return Plugin
  */
-function insert_codes() {
+function insertcodes() {
 	return Plugin::create( __FILE__ );
 }
 
 // Initialize the plugin.
-insert_codes();
+insertcodes();

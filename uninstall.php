@@ -16,7 +16,7 @@ defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
  * @since 1.0.0
  * @return void
  */
-function insert_codes_delete_options( $prefix ) {
+function insertcodes_delete_options( $prefix ) {
 	// Retrieve all options.
 	$all_options = wp_load_alloptions();
 
@@ -28,11 +28,11 @@ function insert_codes_delete_options( $prefix ) {
 	}
 }
 
-if ( 'yes' === get_option( 'insert_codes_delete_data' ) ) {
-	$option_prefix = 'insert_codes_';
+if ( 'yes' === get_option( 'insertcodes_delete_data' ) ) {
+	$option_prefix = 'insertcodes_';
 
 	// Delete options for the main site.
-	insert_codes_delete_options( $option_prefix );
+	insertcodes_delete_options( $option_prefix );
 
 	// Delete options in a multisite network.
 	if ( is_multisite() ) {
@@ -40,7 +40,7 @@ if ( 'yes' === get_option( 'insert_codes_delete_data' ) ) {
 
 		foreach ( $sites as $site ) {
 			switch_to_blog( $site->blog_id );
-			insert_codes_delete_options( $option_prefix );
+			insertcodes_delete_options( $option_prefix );
 			restore_current_blog();
 		}
 	}

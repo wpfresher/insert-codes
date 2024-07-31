@@ -75,11 +75,11 @@ class Plugin {
 	 * @return void
 	 */
 	private function define_constants() {
-		define( 'INSERT_CODES_VERSION', $this->version );
-		define( 'INSERT_CODES_FILE', $this->file );
-		define( 'INSERT_CODES_PATH', plugin_dir_path( $this->file ) );
-		define( 'INSERT_CODES_URL', plugin_dir_url( $this->file ) );
-		define( 'INSERT_CODES_ASSETS_URL', INSERT_CODES_URL . 'assets/' );
+		define( 'INSERTCODES_VERSION', $this->version );
+		define( 'INSERTCODES_FILE', $this->file );
+		define( 'INSERTCODES_PATH', plugin_dir_path( $this->file ) );
+		define( 'INSERTCODES_URL', plugin_dir_url( $this->file ) );
+		define( 'INSERTCODES_ASSETS_URL', INSERTCODES_URL . 'assets/' );
 	}
 
 	/**
@@ -99,7 +99,7 @@ class Plugin {
 	 * @return void
 	 */
 	private function init_hooks() {
-		register_activation_hook( INSERT_CODES_FILE, array( $this, 'activate' ) );
+		register_activation_hook( INSERTCODES_FILE, array( $this, 'activate' ) );
 		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 		add_action( 'admin_notices', array( $this, 'display_flash_notices' ), 12 );
 		add_action( 'init', array( $this, 'init' ), 0 );
@@ -112,10 +112,10 @@ class Plugin {
 	 * @return void
 	 */
 	public function activate() {
-		update_option( 'insert_codes_version', INSERT_CODES_VERSION );
-		update_option( 'insert_codes_header_priority', 10 );
-		update_option( 'insert_codes_body_priority', 10 );
-		update_option( 'insert_codes_footer_priority', 10 );
+		update_option( 'insertcodes_version', INSERTCODES_VERSION );
+		update_option( 'insertcodes_header_priority', 10 );
+		update_option( 'insertcodes_body_priority', 10 );
+		update_option( 'insertcodes_footer_priority', 10 );
 	}
 
 	/**
@@ -125,29 +125,7 @@ class Plugin {
 	 * @return void
 	 */
 	public function load_textdomain() {
-		load_plugin_textdomain( 'insert-codes', false, dirname( plugin_basename( INSERT_CODES_FILE ) ) . '/languages/' );
-	}
-
-	/**
-	 * Check if the plugin is active.
-	 *
-	 * @param string $plugin The plugin slug or basename.
-	 *
-	 * @since 1.0.0
-	 * @return bool
-	 */
-	public function is_plugin_active( $plugin ) {
-		// Check if the $plugin is a basename or a slug. If it's a slug, convert it to a basename.
-		if ( false === strpos( $plugin, '/' ) ) {
-			$plugin = $plugin . '/' . $plugin . '.php';
-		}
-
-		$active_plugins = (array) get_option( 'active_plugins', array() );
-		if ( is_multisite() ) {
-			$active_plugins = array_merge( $active_plugins, get_site_option( 'active_sitewide_plugins', array() ) );
-		}
-
-		return in_array( $plugin, $active_plugins, true ) || array_key_exists( $plugin, $active_plugins );
+		load_plugin_textdomain( 'insert-codes', false, dirname( plugin_basename( INSERTCODES_FILE ) ) . '/languages/' );
 	}
 
 	/**
@@ -161,7 +139,7 @@ class Plugin {
 	 * @return void
 	 */
 	public function add_flash_notice( $notice = '', $type = 'success', $dismissible = true ) {
-		$notices          = get_option( 'insert_codes_flash_notices', array() );
+		$notices          = get_option( 'insertcodes_flash_notices', array() );
 		$dismissible_text = ( $dismissible ) ? 'is-dismissible' : '';
 
 		// Add new notice.
@@ -175,7 +153,7 @@ class Plugin {
 		);
 
 		// Update the notices array.
-		update_option( 'insert_codes_flash_notices', $notices );
+		update_option( 'insertcodes_flash_notices', $notices );
 	}
 
 	/**
@@ -185,7 +163,7 @@ class Plugin {
 	 * @return void
 	 */
 	public function display_flash_notices() {
-		$notices = get_option( 'insert_codes_flash_notices', array() );
+		$notices = get_option( 'insertcodes_flash_notices', array() );
 
 		foreach ( $notices as $notice ) {
 			printf(
@@ -198,7 +176,7 @@ class Plugin {
 
 		// Reset options to prevent notices being displayed forever.
 		if ( ! empty( $notices ) ) {
-			delete_option( 'insert_codes_flash_notices', array() );
+			delete_option( 'insertcodes_flash_notices', array() );
 		}
 	}
 
@@ -209,8 +187,13 @@ class Plugin {
 	 * @return void
 	 */
 	public function init() {
-		new Admin\Admin();
-		new Controllers\Actions();
+		// Load admin classes.
+		if ( is_admin() ) {
+			new Admin\Admin();
+			new Controllers\Actions();
+		}
+
+		// Load frontend classes.
 		new Frontend\Frontend();
 	}
 }

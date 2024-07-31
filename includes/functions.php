@@ -1,6 +1,6 @@
 <?php
 
-defined( 'ABSPATH' ) || exit;
+defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
 /**
  * Allowed HTML for code editor options.
@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit;
  * @since 1.0.0
  * @return array
  */
-function insert_codes_get_allowed_html() {
+function insertcodes_get_allowed_html() {
 	return array(
 		'script'   => array(
 			'type'  => array(),
