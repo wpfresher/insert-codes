@@ -75,8 +75,8 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 					</div>
 
 					<div class="field-group is-last-item">
-						<input type="hidden" name="action" value="insert_codes_settings">
-						<?php wp_nonce_field( 'insert_codes_settings' ); ?>
+						<input type="hidden" name="action" value="insertcodes_settings">
+						<?php wp_nonce_field( 'insertcodes_settings' ); ?>
 						<div class="field-submit-btn">
 							<?php submit_button(); ?>
 						</div>
