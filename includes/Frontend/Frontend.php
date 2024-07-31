@@ -26,13 +26,13 @@ class Frontend {
 	 * @return void
 	 */
 	public function init() {
-		$header_priority = intval( get_option( 'insert_codes_header_priority' ) );
-		$body_priority   = intval( get_option( 'insert_codes_body_priority' ) );
-		$footer_priority = intval( get_option( 'insert_codes_footer_priority' ) );
+		$header_priority = absint( get_option( 'insertcodes_header_priority', 10 ) );
+		$body_priority   = absint( get_option( 'insertcodes_body_priority', 10 ) );
+		$footer_priority = absint( get_option( 'insertcodes_footer_priority', 10 ) );
 
-		add_action( 'wp_head', array( $this, 'insert_codes_into_head' ), $header_priority );
-		add_action( 'wp_body_open', array( $this, 'insert_codes_into_body' ), $body_priority );
-		add_action( 'wp_footer', array( $this, 'insert_codes_into_footer' ), $footer_priority );
+		add_action( 'wp_head', array( $this, 'insert_into_head' ), $header_priority );
+		add_action( 'wp_body_open', array( $this, 'insert_into_body' ), $body_priority );
+		add_action( 'wp_footer', array( $this, 'insert_into_footer' ), $footer_priority );
 	}
 
 	/**
@@ -41,8 +41,8 @@ class Frontend {
 	 * @since 1.0.0
 	 * @return void
 	 */
-	public function insert_codes_into_head() {
-		echo wp_kses( get_option( 'insert_codes_header' ), insert_codes_get_allowed_html() );
+	public function insert_into_head() {
+		echo wp_kses( get_option( 'insertcodes_header' ), insertcodes_get_allowed_html() );
 	}
 
 	/**
@@ -52,8 +52,8 @@ class Frontend {
 	 * @since 1.0.0
 	 * @return void
 	 */
-	public function insert_codes_into_body() {
-		echo wp_kses( get_option( 'insert_codes_body' ), insert_codes_get_allowed_html() );
+	public function insert_into_body() {
+		echo wp_kses( get_option( 'insertcodes_body' ), insertcodes_get_allowed_html() );
 	}
 
 	/**
@@ -62,7 +62,7 @@ class Frontend {
 	 * @since 1.0.0
 	 * @return void
 	 */
-	public function insert_codes_into_footer() {
-		echo wp_kses( get_option( 'insert_codes_footer' ), insert_codes_get_allowed_html() );
+	public function insert_into_footer() {
+		echo wp_kses( get_option( 'insertcodes_footer' ), insertcodes_get_allowed_html() );
 	}
 }

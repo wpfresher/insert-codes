@@ -1,21 +1,21 @@
 @import "form";
 
 // Page Layouts.
-.insert-codes-container{
-	.insert-codes__header{}
-	.insert-codes__body{
+.insertcodes-container{
+	.insertcodes__header{}
+	.insertcodes__body{
 		display: flex;
 		flex-wrap: nowrap;
 		gap: 1.25rem;
 		h3, h4, p{
 			margin: 0;
 		}
-		.insert-codes__content{
+		.insertcodes__content{
 			width: 70%;
 			border: 1px solid #ddd;
 			background: #fff;
 		}
-		.insert-codes__aside{
+		.insertcodes__aside{
 			width: 30%;
 			.aside__item{
 				border: 1px solid #ddd;
@@ -33,8 +33,8 @@
 		}
 		@media (max-width: 782px) {
 			flex-direction: column;
-			.insert-codes__content,
-			.insert-codes__aside{
+			.insertcodes__content,
+			.insertcodes__aside{
 				width: 100%;
 			}
 		}

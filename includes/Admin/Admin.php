@@ -2,7 +2,7 @@
 
 namespace InsertCodes\Admin;
 
-defined( 'ABSPATH' ) || exit;
+defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
 /**
  * Class Admin.
@@ -99,8 +99,8 @@ class Admin {
 			'insert-codes_page_insert-codes-settings',
 		);
 
-		wp_register_style( 'insert-codes-admin', INSERT_CODES_URL . 'assets/dist/css/insert-codes-admin.css', array(), '1.0.0' );
-		wp_register_script( 'insert-codes-admin', INSERT_CODES_URL . 'assets/dist/js/insert-codes-admin.js', array( 'jquery' ), '1.0.0', true );
+		wp_register_style( 'insertcodes-admin', INSERTCODES_URL . 'assets/dist/css/insertcodes-admin.css', array(), INSERTCODES_VERSION );
+		wp_register_script( 'insertcodes-admin', INSERTCODES_URL . 'assets/dist/js/insertcodes-admin.js', array( 'jquery' ), INSERTCODES_VERSION, true );
 
 		if ( 'toplevel_page_insert-codes' === $hook ) {
 			$settings = wp_enqueue_code_editor( array( 'type' => 'text/html' ) );
@@ -110,11 +110,11 @@ class Admin {
 				return;
 			}
 
-			wp_enqueue_script( 'insert-codes-admin' );
+			wp_enqueue_script( 'insertcodes-admin' );
 		}
 
 		if ( in_array( $hook, $screens, true ) ) {
-			wp_enqueue_style( 'insert-codes-admin' );
+			wp_enqueue_style( 'insertcodes-admin' );
 		}
 	}
 }
