@@ -72,7 +72,6 @@ Thumbs.db
 .wordpress-org
 
 #Assets
-*.scss
 *.*.map
 
 # Build related files
