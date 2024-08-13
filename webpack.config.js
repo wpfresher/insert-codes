@@ -6,13 +6,13 @@ module.exports = [
         ...defaultConfig,
         entry: {
             ...defaultConfig.entry(),
-            'css/insertcodes-admin': './src/css/insertcodes-admin.scss',
+            'insertcodes-admin': './src/css/insertcodes-admin.scss',
             //'js/insertcodes-admin': './src/js/insertcodes-admin.js',
         },
         output: {
             ...defaultConfig.output,
             filename: '[name].js',
-            path: __dirname + '/assets/',
+            path: __dirname + '/assets/css/',
         },
         plugins: [
             ...defaultConfig.plugins,
