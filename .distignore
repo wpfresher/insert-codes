@@ -78,6 +78,5 @@ Thumbs.db
 src
 /src/js
 /src/css
-vendor
 lib
 development.md

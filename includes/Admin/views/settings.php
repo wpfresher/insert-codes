@@ -1,6 +1,6 @@
 <?php
 /**
- * Settings.
+ * Settings page. This file is used to markup the settings page of the plugin.
  *
  * @since 1.0.0
  * @package InsertCodess
