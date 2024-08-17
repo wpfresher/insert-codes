@@ -101,7 +101,7 @@ A: Currently, the plugin does not support adding scripts to specific custom post
 * MariaDB version 10 or later
 
 == Screenshots ==
-1. Codes: Easily manage your header, body, and footer scripts from one place.
+1. Insert Codes: Easily manage your header, body, and footer scripts from one place.
 2. Settings Page: Easy and user-friendly admin panel to configure the header, body, and footer scripts options.
 
 == Changelog ==
