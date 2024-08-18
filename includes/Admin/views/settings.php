@@ -86,11 +86,22 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 			<div class="insertcodes__aside aside__items">
 				<div class="aside__item">
 					<div class="aside__item__header">
-						<h4><?php esc_html_e( 'Recommended Plugins', 'insert-codes' ); ?></h4>
+						<h4><?php esc_html_e( 'Support & Rating', 'insert-codes' ); ?></h4>
 					</div>
 					<div class="aside__item__body">
 						<ul>
-							<li><a href="https://wordpress.org/plugins/autocomplete-orders-for-woocommerce/" target="_blank"><?php esc_html_e( 'Autocomplete Orders for WooCommerce', 'insert-codes' ); ?></a></li>
+							<li>
+								<p>
+									<?php esc_html_e( 'If you need help, please visit the support forum.', 'insert-codes' ); ?>
+									<a href="https://wordpress.org/support/plugin/insert-codes/" target="_blank"><?php esc_html_e( 'Get Support', 'insert-codes' ); ?></a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<?php esc_html_e( 'If you like the plugin, please rate it on WordPress.org.', 'insert-codes' ); ?>
+									<a href="https://wordpress.org/plugins/insert-codes/" target="_blank"><?php esc_html_e( 'Give a Rating', 'insert-codes' ); ?></a>
+								</p>
+							</li>
 						</ul>
 					</div>
 				</div>
