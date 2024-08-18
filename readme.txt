@@ -1,6 +1,6 @@
 === Insert Codes - Headers And Footers Code Snippet ===
 Contributors: urldev
-Tags: insert codes, insert headers and footers, insert header, insert footer, code snippet
+Tags: code, code snippet, insert codes, header, footer
 Requires at least: 5.0
 Tested up to: 6.6
 Stable tag: 1.1.0
