@@ -33,6 +33,8 @@ class Frontend {
 		add_action( 'wp_head', array( $this, 'insert_into_head' ), $header_priority );
 		add_action( 'wp_body_open', array( $this, 'insert_into_body' ), $body_priority );
 		add_action( 'wp_footer', array( $this, 'insert_into_footer' ), $footer_priority );
+		add_filter( 'safe_style_css', array( $this, 'safe_styles' ) );
+		add_filter( 'pre_kses', array( $this, 'normalize_entities' ), PHP_INT_MAX );
 	}
 
 	/**
@@ -64,5 +66,32 @@ class Frontend {
 	 */
 	public function insert_into_footer() {
 		echo wp_kses( get_option( 'insertcodes_footer' ), insertcodes_get_allowed_html() );
+	}
+
+	/**
+	 * Add allowed styles.
+	 *
+	 * @param array $styles Allowed styles.
+	 *
+	 * @since 1.1.0
+	 * @return array
+	 */
+	public function safe_styles( $styles ) {
+		$styles[] = 'display';
+		$styles[] = 'visibility';
+
+		return $styles;
+	}
+
+	/**
+	 * Normalize entities.
+	 *
+	 * @param string $content Content.
+	 *
+	 * @since 1.1.0
+	 * @return string
+	 */
+	public function normalize_entities( $content ) {
+		return html_entity_decode( $content );
 	}
 }
