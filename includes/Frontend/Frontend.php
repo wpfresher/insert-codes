@@ -73,7 +73,7 @@ class Frontend {
 	 *
 	 * @param array $styles Allowed styles.
 	 *
-	 * @since 1.0.0
+	 * @since 1.1.0
 	 * @return array
 	 */
 	public function safe_styles( $styles ) {
@@ -88,7 +88,7 @@ class Frontend {
 	 *
 	 * @param string $content Content.
 	 *
-	 * @since 1.0.0
+	 * @since 1.1.0
 	 * @return string
 	 */
 	public function normalize_entities( $content ) {

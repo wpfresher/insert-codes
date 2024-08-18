@@ -1,7 +1,7 @@
 {
   "name": "insert-codes",
   "title": "Insert Codes - Headers And Footers Code Snippet",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The \"Insert Codes - Headers And Footers Code Snippet\" plugin allows you to easily add custom code to the header, body, and footer sections of your WordPress website.",
   "homepage": "https://urldev.com/plugins/insert-codes/",
   "license": "GPL-2.0-or-later",

@@ -3,7 +3,7 @@ Contributors: urldev
 Tags: insert codes, insert headers and footers, insert header, insert footer, code snippet
 Requires at least: 5.0
 Tested up to: 6.6
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -49,50 +49,53 @@ Install Insert Codes - Headers And Footers Code Snippet from the WordPress plugi
 4. Configure the settings and start using the plugin feature!
 
 == Frequently Asked Questions ==
-= Q: How do I add a header script? =
+= How do I add a header script? =
 A: After activating the plugin, go to 'Settings' > 'Insert Codes', and you will find a field for 'Header Scripts'. Paste your code snippet there and save changes.
 
-= Q: Can I add multiple scripts in each section? =
+= Can I add multiple scripts in each section? =
 A: Yes, you can add multiple scripts in each section. Just paste them one after the other.
 
-= Q: Is it safe to add third-party scripts using this plugin? =
+= Is it safe to add third-party scripts using this plugin? =
 A: Yes, it is safe as long as you ensure the scripts are from trusted sources. The plugin itself securely inserts the code snippets into your site.
 
-= Q: Will this plugin slow down my site? =
+= Will this plugin slow down my site? =
 A: The impact on performance is minimal as the plugin inserts the scripts directly into the respective sections of your site's HTML. However, excessive use of scripts can affect performance, so use them judiciously.
 
-= Q: Can I add custom CSS using this plugin? =
+= Can I add custom CSS using this plugin? =
 A: Yes, you can add custom CSS to the header section using this plugin. Just paste your CSS code snippet in the 'Header Scripts' field.
 
-= Q: Can I add Google Analytics tracking code using this plugin? =
+= Can I add Google Analytics tracking code using this plugin? =
 A: Yes, you can add Google Analytics tracking code to the header section using this plugin. Paste the tracking code snippet in the 'Header Scripts' field.
 
-= Q: Can I add Facebook Pixel code using this plugin? =
+= Can I add Facebook Pixel code using this plugin? =
 A: Yes, you can add Facebook Pixel code to the header section using this plugin. Paste the Pixel code snippet in the 'Header Scripts' field.
 
-= Q: Can I add custom scripts to the head section using this plugin? =
+= Can I add custom scripts to the head section using this plugin? =
 A: Yes, you can add custom scripts to the head section using this plugin. Paste your code snippet in the 'Header Scripts' field.
 
-= Q: Can I add custom scripts to the body section using this plugin? =
+= Can I add custom scripts to the body section using this plugin? =
 A: Yes, you can add custom scripts to the body section using this plugin. Paste your code snippet in the 'Body Scripts' field.
 
-= Q: Can I add custom scripts to the footer section using this plugin? =
+= Can I add custom scripts to the footer section using this plugin? =
 A: Yes, you can add custom scripts to the footer section using this plugin. Paste your code snippet in the 'Footer Scripts' field.
 
-= Q: Can I add scripts to specific pages using this plugin? =
+= Can I add scripts to specific pages using this plugin? =
 A: Currently, the plugin does not support adding scripts to specific pages. The scripts added using this plugin will be displayed on all pages of your site.
 
-= Q: Can I add scripts to specific posts using this plugin? =
+= Can I add scripts to specific posts using this plugin? =
 A: Currently, the plugin does not support adding scripts to specific posts. The scripts added using this plugin will be displayed on all posts of your site.
 
-= Q: Can I add scripts to specific categories using this plugin? =
+= Can I add scripts to specific categories using this plugin? =
 A: Currently, the plugin does not support adding scripts to specific categories. The scripts added using this plugin will be displayed on all categories of your site.
 
-= Q: Can I add scripts to specific tags using this plugin? =
+= Can I add scripts to specific tags using this plugin? =
 A: Currently, the plugin does not support adding scripts to specific tags. The scripts added using this plugin will be displayed on all tags of your site.
 
-= Q: Can I add scripts to specific custom post types using this plugin? =
+= Can I add scripts to specific custom post types using this plugin? =
 A: Currently, the plugin does not support adding scripts to specific custom post types. The scripts added using this plugin will be displayed on all custom post types of your site.
+
+= Can I add scripts to specific taxonomies using this plugin? =
+A: Currently, the plugin does not support adding scripts to specific taxonomies. The scripts added using this plugin will be displayed on all taxonomies of your site.
 
 = Minimum requirements =
 * WordPress 5.0 or greater
@@ -105,6 +108,12 @@ A: Currently, the plugin does not support adding scripts to specific custom post
 2. Settings Page: Easy and user-friendly admin panel to configure the header, body, and footer scripts options.
 
 == Changelog ==
+= 1.1.0 (19 August 2024) =
+* Enhancement: Enhanced sanitization and validation of input fields.
+* Enhancement: Improved user interface and settings page.
+* Contact support: Add support & rating widget.
+* Fix: few known issues.
+
 = 1.0.0 (19 June 2024) =
 * Initial release with support for adding header, body, and footer scripts.
 
