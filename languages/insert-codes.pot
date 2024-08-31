@@ -2,9 +2,9 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Insert Codes - Headers And Footers Code Snippet 1.0.0\n"
+"Project-Id-Version: Insert Codes - Headers And Footers Code Snippet 1.2.0\n"
 "Report-Msgid-Bugs-To: https://urldev.com/support\n"
-"POT-Creation-Date: 2024-08-17 06:32:45+00:00\n"
+"POT-Creation-Date: 2024-08-31 12:12:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,16 +29,20 @@ msgstr ""
 msgid "10"
 msgstr ""
 
-#: includes/Admin/Admin.php:32 includes/Admin/Admin.php:33
+#: includes/Admin/Admin.php:33 includes/Admin/Admin.php:34
 #: includes/Admin/views/codes.php:16
 msgid "Insert Codes"
 msgstr ""
 
-#: includes/Admin/Admin.php:43 includes/Admin/Admin.php:44
+#: includes/Admin/Admin.php:44 includes/Admin/Admin.php:45
 msgid "Codes"
 msgstr ""
 
-#: includes/Admin/Admin.php:61 includes/Admin/Admin.php:62
+#: includes/Admin/Admin.php:62 includes/Admin/Admin.php:63
+msgid "Code Snippets"
+msgstr ""
+
+#: includes/Admin/Admin.php:89 includes/Admin/Admin.php:90
 #: includes/Admin/views/settings.php:16
 msgid "Settings"
 msgstr ""
@@ -76,11 +80,28 @@ msgid "Insert Scripts in Footer:"
 msgstr ""
 
 #: includes/Admin/views/codes.php:70 includes/Admin/views/settings.php:89
-msgid "Recommended Plugins"
+#: includes/Admin/views/snippets.php:50
+msgid "Support & Rating"
 msgstr ""
 
-#: includes/Admin/views/codes.php:74 includes/Admin/views/settings.php:93
-msgid "Autocomplete Orders for WooCommerce"
+#: includes/Admin/views/codes.php:76 includes/Admin/views/settings.php:95
+#: includes/Admin/views/snippets.php:56
+msgid "If you need help, please visit the support forum."
+msgstr ""
+
+#: includes/Admin/views/codes.php:77 includes/Admin/views/settings.php:96
+#: includes/Admin/views/snippets.php:57
+msgid "Get Support"
+msgstr ""
+
+#: includes/Admin/views/codes.php:82 includes/Admin/views/settings.php:101
+#: includes/Admin/views/snippets.php:62
+msgid "If you like the plugin, please rate it on WordPress.org."
+msgstr ""
+
+#: includes/Admin/views/codes.php:83 includes/Admin/views/settings.php:102
+#: includes/Admin/views/snippets.php:63
+msgid "Give a Rating"
 msgstr ""
 
 #: includes/Admin/views/settings.php:18
@@ -136,6 +157,28 @@ msgstr ""
 
 #: includes/Admin/views/settings.php:73
 msgid "Enabling this will delete all the data while uninstalling the plugin."
+msgstr ""
+
+#: includes/Admin/views/snippets.php:16
+msgid "Insert Code Snippets"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:18
+msgid ""
+"Bellow are the code editor fields for inserting code snippets inside the "
+"functions.php file."
+msgstr ""
+
+#: includes/Admin/views/snippets.php:25
+msgid "PHP Code Snippets"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:30
+msgid "PHP Code Snippets:"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:34
+msgid "These scripts will be executed in the PHP context."
 msgstr ""
 
 #: includes/Controllers/Actions.php:41
