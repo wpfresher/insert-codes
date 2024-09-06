@@ -8,14 +8,12 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  * Class ExecutableCodes.
  * Handles the executable codes.
  *
- * @since 1.0.0
+ * @since 1.2.0
  * @package InsertCodes\Controllers
  */
 class ExecutableCodes {
 	/**
 	 * Constructor.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct() {
 		add_action( 'init', array( $this, 'execute_init' ) );
@@ -24,8 +22,7 @@ class ExecutableCodes {
 	/**
 	 * Execute the code snippet.
 	 *
-	 * @since 1.0.0
-	 *
+	 * @since 1.2.0
 	 * @return void
 	 */
 	public function execute_init() {

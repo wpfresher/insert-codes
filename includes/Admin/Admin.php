@@ -53,7 +53,7 @@ class Admin {
 	/**
 	 * Add code snippets submenu.
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 * @return void
 	 */
 	public function code_snippets_menu() {
@@ -70,7 +70,7 @@ class Admin {
 	/**
 	 * Render code snippets page.
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 * @return void
 	 */
 	public function code_snippets_page() {

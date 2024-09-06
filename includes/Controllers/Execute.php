@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  * Class Execute.
  * Execute the code snippets when needed.
  *
- * @since 1.0.0
+ * @since 1.2.0
  * @package InsertCodes\Controllers
  */
 class Execute {
@@ -16,6 +16,8 @@ class Execute {
 	 * The error message.
 	 *
 	 * @var string $error The error message.
+	 *
+	 * @since 1.2.0
 	 */
 	private $error;
 
@@ -25,7 +27,7 @@ class Execute {
 	 * @param string $code The code snippet.
 	 * @param array  $args The arguments to pass to the code snippet.
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 */
 	public function __construct( $code, $args = array() ) {
 		$this->error = null;
@@ -37,7 +39,7 @@ class Execute {
 	 *
 	 * @param string $code The code snippet.
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 * @return bool
 	 */
 	public function validate_code( $code ) {
@@ -96,7 +98,7 @@ class Execute {
 	 * @param string $code The code snippet.
 	 * @param array  $args The arguments to pass to the code snippet.
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 * @return void|string
 	 */
 	public function execute( $code, $args = array() ) {
@@ -202,6 +204,7 @@ class Execute {
 	 *
 	 * @param string $code The code to check.
 	 *
+	 * @since 1.2.0
 	 * @return bool
 	 */
 	public static function is_code_not_allowed( $code ) {
@@ -229,7 +232,7 @@ class Execute {
 	 * @param string $error The error message.
 	 * @param string $line  The line number.
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 * @return void
 	 */
 	public function maybe_disable_snippet( $error, $line = null ) {

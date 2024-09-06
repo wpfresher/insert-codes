@@ -52,7 +52,7 @@ class Actions {
 	/**
 	 * Updating PHP code snippets.
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 * @return void
 	 */
 	public static function handle_snippets() {
@@ -120,7 +120,7 @@ class Actions {
 	 *
 	 * @param array $data POST data.
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 * @return string $codes Sanitized PHP codes.
 	 */
 	public static function sanitize_snippet( $data ) {
