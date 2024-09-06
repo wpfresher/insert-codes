@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Insert Codes - Headers And Footers Code Snippet 1.2.0\n"
 "Report-Msgid-Bugs-To: https://urldev.com/support\n"
-"POT-Creation-Date: 2024-09-05 15:14:59+00:00\n"
+"POT-Creation-Date: 2024-09-06 18:15:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -80,27 +80,27 @@ msgid "Insert Scripts in Footer:"
 msgstr ""
 
 #: includes/Admin/views/codes.php:70 includes/Admin/views/settings.php:89
-#: includes/Admin/views/snippets.php:50
+#: includes/Admin/views/snippets.php:76
 msgid "Support & Rating"
 msgstr ""
 
 #: includes/Admin/views/codes.php:76 includes/Admin/views/settings.php:95
-#: includes/Admin/views/snippets.php:56
+#: includes/Admin/views/snippets.php:82
 msgid "If you need help, please visit the support forum."
 msgstr ""
 
 #: includes/Admin/views/codes.php:77 includes/Admin/views/settings.php:96
-#: includes/Admin/views/snippets.php:57
+#: includes/Admin/views/snippets.php:83
 msgid "Get Support"
 msgstr ""
 
 #: includes/Admin/views/codes.php:82 includes/Admin/views/settings.php:101
-#: includes/Admin/views/snippets.php:62
+#: includes/Admin/views/snippets.php:88
 msgid "If you like the plugin, please rate it on WordPress.org."
 msgstr ""
 
 #: includes/Admin/views/codes.php:83 includes/Admin/views/settings.php:102
-#: includes/Admin/views/snippets.php:63
+#: includes/Admin/views/snippets.php:89
 msgid "Give a Rating"
 msgstr ""
 
@@ -173,24 +173,71 @@ msgstr ""
 msgid "PHP Code Snippets"
 msgstr ""
 
-#: includes/Admin/views/snippets.php:30
+#: includes/Admin/views/snippets.php:29
 msgid "PHP Code Snippets:"
 msgstr ""
 
-#: includes/Admin/views/snippets.php:34
+#: includes/Admin/views/snippets.php:33
 msgid "These scripts will be executed in the PHP context."
 msgstr ""
 
-#: includes/Controllers/Actions.php:42
+#: includes/Admin/views/snippets.php:37
+msgid "Snippets Settings"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:41
+msgid "Enable Snippets:"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:46
+msgid "Enable php code snippet"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:48
+msgid "Enabling this will execute the PHP code snippets."
+msgstr ""
+
+#: includes/Admin/views/snippets.php:53
+msgid "Location:"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:57
+msgid "Everywhere"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:58
+msgid "Admin only"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:59
+msgid "Frontend only"
+msgstr ""
+
+#: includes/Admin/views/snippets.php:61
+msgid "Select where the code snippet should execute."
+msgstr ""
+
+#: includes/Controllers/Actions.php:35 includes/Controllers/Actions.php:63
+#: includes/Controllers/Actions.php:99
+msgid "You do not have sufficient permissions to perform this action."
+msgstr ""
+
+#: includes/Controllers/Actions.php:47
 msgid "Codes saved successfully."
 msgstr ""
 
-#: includes/Controllers/Actions.php:64
+#: includes/Controllers/Actions.php:83
 msgid "PHP code snippets saved successfully."
 msgstr ""
 
-#: includes/Controllers/Actions.php:89
+#: includes/Controllers/Actions.php:113
 msgid "Settings saved successfully."
+msgstr ""
+
+#: includes/Controllers/Execute.php:168
+msgid ""
+"Suspicious code detected. Maybe the code snippet contains a disallowed "
+"function: wp_die, die, exit, eval."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
