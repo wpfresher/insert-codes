@@ -35,6 +35,37 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 							</div>
 						</div>
 
+						<div class="field-group filed-section">
+							<h3><?php esc_html_e( 'Snippets Settings', 'insert-codes' ); ?></h3>
+						</div>
+
+						<div class="field-group">
+							<div class="field-label">
+								<strong><?php esc_html_e( 'Enable Snippets:', 'insert-codes' ); ?></strong>
+							</div>
+							<div class="field">
+								<label for="insertcodes_enable_snippets">
+									<input name="insertcodes_enable_snippets" id="insertcodes_enable_snippets" type="checkbox" value="yes" <?php checked( get_option( 'insertcodes_enable_snippets' ), 'yes' ); ?>>
+									<?php esc_html_e( 'Enable php code snippet', 'insert-codes' ); ?>
+								</label>
+								<p class="description"><?php esc_html_e( 'Enabling this will execute the PHP code snippets.', 'insert-codes' ); ?></p>
+							</div>
+						</div>
+
+						<div class="field-group">
+							<div class="field-label">
+								<label for="insertcodes_snippets_location"><strong><?php esc_html_e( 'Location:', 'insert-codes' ); ?></strong></label>
+							</div>
+							<div class="field">
+								<select name="insertcodes_snippets_location" id="insertcodes_snippets_location" class="regular-text">
+									<option value="everywhere" <?php selected( get_option( 'insertcodes_snippets_location' ), 'everywhere' ); ?>><?php esc_html_e( 'Everywhere', 'insert-codes' ); ?></option>
+									<option value="admin_only" <?php selected( get_option( 'insertcodes_snippets_location' ), 'admin_only' ); ?>><?php esc_html_e( 'Admin only', 'insert-codes' ); ?></option>
+									<option value="frontend_only" <?php selected( get_option( 'insertcodes_snippets_location' ), 'frontend_only' ); ?>><?php esc_html_e( 'Frontend only', 'insert-codes' ); ?></option>
+								</select>
+								<p class="description"><?php esc_html_e( 'Select where the code snippet should execute.', 'insert-codes' ); ?></p>
+							</div>
+						</div>
+
 						<div class="field-group is-last-item">
 							<input type="hidden" name="action" value="insertcodes_snippets">
 							<?php wp_nonce_field( 'insertcodes_snippets' ); ?>

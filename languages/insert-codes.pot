@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Insert Codes - Headers And Footers Code Snippet 1.2.0\n"
 "Report-Msgid-Bugs-To: https://urldev.com/support\n"
-"POT-Creation-Date: 2024-08-31 12:12:56+00:00\n"
+"POT-Creation-Date: 2024-09-05 15:14:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -181,11 +181,15 @@ msgstr ""
 msgid "These scripts will be executed in the PHP context."
 msgstr ""
 
-#: includes/Controllers/Actions.php:41
+#: includes/Controllers/Actions.php:42
 msgid "Codes saved successfully."
 msgstr ""
 
-#: includes/Controllers/Actions.php:66
+#: includes/Controllers/Actions.php:64
+msgid "PHP code snippets saved successfully."
+msgstr ""
+
+#: includes/Controllers/Actions.php:89
 msgid "Settings saved successfully."
 msgstr ""
 

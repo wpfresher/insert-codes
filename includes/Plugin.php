@@ -187,6 +187,9 @@ class Plugin {
 	 * @return void
 	 */
 	public function init() {
+		// Load common classes.
+		new Controllers\ExecutableCodes();
+
 		// Load admin classes.
 		if ( is_admin() ) {
 			new Admin\Admin();
