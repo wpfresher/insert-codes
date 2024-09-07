@@ -122,7 +122,7 @@ A: Currently, the plugin does not support adding scripts to specific taxonomies.
 == Screenshots ==
 1. Insert Codes: Easily manage your header, body, and footer scripts from one place.
 2. Code Snippets: Add and manage custom code snippets for your WordPress site. It supports PHP, HTML, CSS, and JavaScript code.
-3 Settings Page: Easy and user-friendly admin panel to configure the header, body, and footer scripts options.
+3. Settings Page: Easy and user-friendly admin panel to configure the header, body, and footer scripts options.
 
 == Changelog ==
 = 1.2.0 (07 September 2024) =
