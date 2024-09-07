@@ -92,6 +92,37 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 							</ul>
 						</div>
 					</div>
+					<div class="aside__item">
+						<div class="aside__item__header">
+							<h4><?php esc_html_e( 'Important Notes', 'insert-codes' ); ?></h4>
+						</div>
+						<div class="aside__item__body">
+							<ul>
+								<li>
+									<p>
+										<?php esc_html_e( 'Please make sure to test the code snippets before saving if you are using the PHP code snippets feature. Incorrect code can break your website. We recommend to take a backup of your website before saving the code snippets.', 'insert-codes' ); ?>
+									</p>
+								</li>
+								<li>
+									<p>
+										<?php esc_html_e( '* If you need urgent support, please visit the support forum.', 'insert-codes' ); ?>
+										<a href="https://wordpress.org/support/plugin/insert-codes/" target="_blank"><?php esc_html_e( 'Get Support', 'insert-codes' ); ?></a>
+									</p>
+								</li>
+								<li>
+									<p>
+										<?php esc_html_e( '* If you need help via our site, please visit the support forum. We provide urgent support via our site if your site goes down due to the plugin.', 'insert-codes' ); ?>
+										<a href="https://wpfresher.com/contact/" target="_blank"><?php esc_html_e( 'Get Support', 'insert-codes' ); ?></a>
+									</p>
+								</li>
+								<li>
+									<p>
+										<?php esc_html_e( 'Please remember, the plugin provides the code snippets feature and it is harder to debug the code snippets.', 'insert-codes' ); ?>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
