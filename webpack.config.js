@@ -8,13 +8,13 @@ module.exports = [
         ...defaultConfig,
         entry: {
             ...defaultConfig.entry(),
-            'insertcodes-admin': './src/css/insertcodes-admin.scss',
-            //'js/insertcodes-admin': './src/js/insertcodes-admin.js',
+            'css/insertcodes-admin': './src/css/insertcodes-admin.scss',
+            'js/insertcodes-admin': './src/js/insertcodes-admin.js',
         },
         output: {
             ...defaultConfig.output,
             filename: '[name].js',
-            path: __dirname + '/assets/css/',
+            path: __dirname + '/assets/',
         },
         plugins: [
             ...defaultConfig.plugins,
