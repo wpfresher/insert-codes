@@ -2,8 +2,8 @@
 Contributors: urldev
 Tags: code, code snippet, insert codes, header, footer
 Requires at least: 5.0
-Tested up to: 6.6
-Stable tag: 1.2.0
+Tested up to: 6.7
+Stable tag: 1.3.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,10 @@ A: Currently, the plugin does not support adding scripts to specific taxonomies.
 3. Settings Page: Easy and user-friendly admin panel to configure the header, body, and footer scripts options.
 
 == Changelog ==
+= 1.3.0 (14 January 2025) =
+* New: Added support for inserting css and js files using the link tag.
+* Compatibility: Compatible with the latest version of WordPress.
+
 = 1.2.0 (07 September 2024) =
 * New: Added support for custom code snippets.
 * Enhancement: Improved code snippet management.
