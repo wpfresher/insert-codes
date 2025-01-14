@@ -75,5 +75,18 @@ function insertcodes_get_allowed_html() {
 			'id'     => array(),
 			'style'  => array(),
 		),
+		'link'     => array(
+			'rel'            => array(),
+			'type'           => array(),
+			'href'           => array(),
+			'media'          => array(),
+			'hreflang'       => array(),
+			'sizes'          => array(),
+			'as'             => array(),
+			'crossorigin'    => array(),
+			'referrerpolicy' => array(),
+			'title'          => array(),
+			'integrity'      => array(),
+		),
 	);
 }
