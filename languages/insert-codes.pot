@@ -1,15 +1,15 @@
-# Copyright (C) 2024 UrlDev
+# Copyright (C) 2025 UrlDev
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Insert Codes - The Code Snippets Manager for WordPress "
-"1.2.0\n"
+"1.3.0\n"
 "Report-Msgid-Bugs-To: https://urldev.com/support\n"
-"POT-Creation-Date: 2024-09-07 15:45:49+00:00\n"
+"POT-Creation-Date: 2025-01-14 04:10:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -50,7 +50,7 @@ msgstr ""
 
 #: includes/Admin/views/codes.php:18
 msgid ""
-"Bellow are the code editor fields for inserting codes inside the header, "
+"Below are the code editor fields for inserting codes inside the header, "
 "body & footer."
 msgstr ""
 
@@ -107,7 +107,7 @@ msgid "Give a Rating"
 msgstr ""
 
 #: includes/Admin/views/settings.php:18
-msgid "Bellow are the settings fields of the plugin."
+msgid "Below are the settings fields of the plugin."
 msgstr ""
 
 #: includes/Admin/views/settings.php:25
@@ -167,7 +167,7 @@ msgstr ""
 
 #: includes/Admin/views/snippets.php:18
 msgid ""
-"Bellow are the code editor fields for inserting code snippets inside the "
+"Below are the code editor fields for inserting code snippets inside the "
 "functions.php file."
 msgstr ""
 
