@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 				<h1 class="wp-heading-inline">
 					<?php esc_html_e( 'Insert Code Snippets', 'insert-codes' ); ?>
 				</h1>
-				<p><?php esc_html_e( 'Bellow are the code editor fields for inserting code snippets inside the functions.php file.', 'insert-codes' ); ?></p>
+				<p><?php esc_html_e( 'Below are the code editor fields for inserting code snippets inside the functions.php file.', 'insert-codes' ); ?></p>
 			</div>
 			<hr class="wp-header-end">
 			<div class="insertcodes__body">

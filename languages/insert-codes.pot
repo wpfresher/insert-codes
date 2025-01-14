@@ -50,7 +50,7 @@ msgstr ""
 
 #: includes/Admin/views/codes.php:18
 msgid ""
-"Bellow are the code editor fields for inserting codes inside the header, "
+"Below are the code editor fields for inserting codes inside the header, "
 "body & footer."
 msgstr ""
 
@@ -107,7 +107,7 @@ msgid "Give a Rating"
 msgstr ""
 
 #: includes/Admin/views/settings.php:18
-msgid "Bellow are the settings fields of the plugin."
+msgid "Below are the settings fields of the plugin."
 msgstr ""
 
 #: includes/Admin/views/settings.php:25
@@ -167,7 +167,7 @@ msgstr ""
 
 #: includes/Admin/views/snippets.php:18
 msgid ""
-"Bellow are the code editor fields for inserting code snippets inside the "
+"Below are the code editor fields for inserting code snippets inside the "
 "functions.php file."
 msgstr ""
 
