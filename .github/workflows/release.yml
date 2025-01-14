@@ -44,6 +44,9 @@ jobs:
       - name: Run build script
         run: npm run build
 
+      - name: Install Subversion
+        run: sudo apt-get install -y subversion
+
       - name: Checkout SVN repository
         run: svn checkout ${{ secrets.SVN_REPOSITORY_URL }} svn
 
