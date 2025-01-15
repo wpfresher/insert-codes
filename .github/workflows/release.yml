@@ -61,6 +61,8 @@ jobs:
         run: |
           mkdir -p svn/assets
           rsync -r --delete --include '*/' --include '*.png' --include '*.jpg' --include '*.jpeg' --include '*.gif' --include '*.svg' --exclude '*' .wordpress-org/ svn/assets/
+          mkdir -p svn/assets/blueprints
+          cp blueprint.json svn/assets/blueprints/blueprint.json
           cd svn
           svn add --force assets
           svn commit -m "Update assets for version ${{ github.ref }}" --username ${{ secrets.SVN_USERNAME }} --password ${{ secrets.SVN_PASSWORD }} --no-auth-cache --non-interactive
