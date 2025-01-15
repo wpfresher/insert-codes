@@ -1,5 +1,5 @@
 {
-  "landingPage": "/wp-admin/edit.php",
+  "landingPage": "/wp-admin/admin.php?page=insert-codes",
   "preferredVersions": {
     "php": "7.4",
     "wp": "5.0"
