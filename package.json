@@ -1,7 +1,7 @@
 {
   "name": "insert-codes",
   "title": "Insert Codes - The Code Snippets Manager for WordPress",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "The \"Insert Codes - The Code Snippets Manager for WordPress\" plugin allows you to easily manage custom code snippets and add custom code to the header, body, and footer sections of your WordPress website.",
   "homepage": "https://urldev.com/plugins/insert-codes/",
   "license": "GPL-v2.0-or-later",
