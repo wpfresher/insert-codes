@@ -19,6 +19,11 @@ function insertcodes_get_allowed_html() {
 			'data-user'    => array(),
 			'id'           => array(),
 		),
+		'style'    => array(
+			'type'  => array(),
+			'media' => array(),
+			'src'   => array(),
+		),
 		'noscript' => array(
 			'type'  => array(),
 			'src'   => array(),
