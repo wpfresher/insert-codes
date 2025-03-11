@@ -3,7 +3,7 @@ Contributors: urldev
 Tags: code, code snippet, insert codes, header, footer
 Requires at least: 5.0
 Tested up to: 6.7
-Stable tag: 1.4.0
+Stable tag: 1.5.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,9 @@ A: Currently, the plugin does not support adding scripts to specific taxonomies.
 3. Settings Page: Easy and user-friendly admin panel to configure the header, body, and footer scripts options.
 
 == Changelog ==
+= 1.5.0 (12 March 2025) =
+* New: Add support for the ability to add inner style.
+
 = 1.4.0 (15 January 2025) =
 * New: Added WordPress Playground for live preview of code snippets.
 
