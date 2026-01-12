@@ -3,7 +3,7 @@
  * Plugin Name:       Insert Codes - The Code Snippets Manager for WordPress
  * Plugin URI:        https://urldev.com/plugins/insert-codes/
  * Description:       The "Insert Codes - The Code Snippets Manager for WordPress" plugin allows you to easily manage custom code snippets and add custom code to the header, body, and footer sections of your WordPress website.
- * Version:           1.5.0
+ * Version:           1.6.0
  * Requires at least: 5.0
  * Requires PHP:      7.4
  * Author:            UrlDev
@@ -12,7 +12,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       insert-codes
  * Domain Path:       /languages
- * Tested up to:      6.7
+ * Tested up to:      6.9
  *
  * @package InsertCodes
  *
@@ -41,7 +41,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  * @return Plugin plugin initialize class.
  */
 function insertcodes() {
-	return Plugin::create( __FILE__, '1.5.0' );
+	return Plugin::create( __FILE__, '1.6.0' );
 }
 
 // Initialize the plugin.

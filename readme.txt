@@ -2,8 +2,8 @@
 Contributors: urldev
 Tags: code, code snippet, insert codes, header, footer
 Requires at least: 5.0
-Tested up to: 6.7
-Stable tag: 1.5.0
+Tested up to: 6.9
+Stable tag: 1.6.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,10 @@ A: Currently, the plugin does not support adding scripts to specific taxonomies.
 3. Settings Page: Easy and user-friendly admin panel to configure the header, body, and footer scripts options.
 
 == Changelog ==
+= 1.6.0 (12 january 2026) =
+* New: Added support for ready to use plugin by downloading from the GitHub repository.
+* Public Repository: [Insert Codes - Insert Headers And Footers + Code Snippets Manager for WordPress](https://github.com/wpfresher/insert-codes)
+
 = 1.5.0 (12 March 2025) =
 * New: Add support for the ability to add inner style.
 
