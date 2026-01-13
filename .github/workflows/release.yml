@@ -18,7 +18,26 @@ jobs:
       - name: Set plugin slug
         run: echo "PLUGIN_SLUG=insert-codes" >> $GITHUB_ENV
 
-      - name: Build plugin
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Composer dependencies
+        run: composer install --no-dev --no-scripts --optimize-autoloader
+
+      - name: Install npm dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Prepare plugin for distribution
         run: |
           mkdir build
           rsync -av --exclude-from=.distignore ./ build/${{ env.PLUGIN_SLUG }}
