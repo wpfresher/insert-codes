@@ -6,15 +6,8 @@
   "license": "GPL-v2-or-later",
   "prefer-stable": true,
   "minimum-stability": "dev",
-  "repositories": [
-    {
-      "url": "git@github.com:wpfresher/wpfresher-sniffs.git",
-      "type": "github"
-    }
-  ],
-  "require-dev": {
-    "wpfresher/wpfresher-sniffs": "dev-master"
-  },
+  "repositories": [],
+  "require-dev": {},
   "require": {
     "php": ">=7.4"
   },
